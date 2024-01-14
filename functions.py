@@ -27,12 +27,8 @@ def extractShapesFromSVG(location,parts):
     # Create a BeautifulSoup object and specify the lxml parser
     soup = BeautifulSoup(svg_content, 'html.parser')
 
-    # Find all the path elements, as an example
+    # Find all the path elements
     path_elements = soup.find_all('path')
-
-    # For each path element, you can then access its 'd' attribute, which contains the path data
-    for path in path_elements:
-        print(path.get('d'))
 
 
 
